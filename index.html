@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chat UI Simulation</title>
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">💬</div>
+        <div>
+          <h1>Chatter</h1>
+          <p class="muted">Chat UI Simulation</p>
+        </div>
+      </div>
+
+      <div class="conversations" id="convoList" role="list"></div>
+
+      <div class="sidebar-foot">
+        <button id="newConvBtn" class="btn">+ New Chat</button>
+        <small class="muted">Local demo — data stored in your browser.</small>
+      </div>
+    </aside>
+
+    <main class="chat-surface">
+      <header class="chat-header" id="chatHeader">
+        <div class="head-left">
+          <div class="avatar" id="chatAvatar">🤖</div>
+          <div>
+            <div id="chatTitle">Welcome</div>
+            <div class="muted small" id="chatSubtitle">Start a conversation</div>
+          </div>
+        </div>
+        <div class="head-right">
+          <button id="clearBtn" class="icon" title="Clear conversation">🗑️</button>
+          <button id="exportBtn" class="btn small">Export</button>
+        </div>
+      </header>
+
+      <section class="messages-wrap" id="messagesWrap" tabindex="0">
+        <div id="messages" class="messages"></div>
+      </section>
+
+      <form id="composer" class="composer" autocomplete="off">
+        <div class="composer-left">
+          <button type="button" id="attachBtn" class="icon" title="Attach (image)">📎</button>
+          <input id="fileInput" type="file" accept="image/*" hidden>
+        </div>
+
+        <div class="composer-mid">
+          <textarea id="input" rows="1" placeholder="Type a message — press Enter to send, Shift+Enter for newline"></textarea>
+        </div>
+
+        <div class="composer-right">
+          <button type="button" id="voiceBtn" class="icon" title="Simulate voice">🎙️</button>
+          <button type="submit" id="sendBtn" class="btn primary">Send</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
