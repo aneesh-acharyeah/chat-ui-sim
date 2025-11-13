@@ -1,4 +1,4 @@
-# Chat UI Simulation (JavaScript)
+# Chat UI Simulation (JavaScript) 
 
 A modern and stylish chat interface built with pure JavaScript, HTML, and CSS.  
 Simulates real-time messaging with typing effects, local chat history, and export options.
